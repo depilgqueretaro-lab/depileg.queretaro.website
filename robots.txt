@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://depilegqueretaro.com/sitemap.xml

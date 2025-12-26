@@ -1,82 +1,710 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="es" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Depileg Queretaro</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f4f4f4;
-        }
+    <!-- SEO Meta Tags -->
+    <title>Depilación con Cera de Miel en Querétaro | Depileg - 10+ Años de Experiencia</title>
+    <meta name="description"
+        content="Depilación profesional con cera de miel en Querétaro. Especialistas con más de 10 años de experiencia. Bikini brasileño, piernas, axilas y más. Agenda tu cita por WhatsApp.">
+    <meta name="keywords"
+        content="depilación Querétaro, cera de miel Querétaro, depilación profesional, bikini brasileño Querétaro, depilación Colinas del Sur, estética Querétaro">
+    <meta name="author" content="Depileg Querétaro">
+    <meta name="robots" content="index, follow">
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://depilegqueretaro.com/">
+    <meta property="og:title" content="Depilación con Cera de Miel en Querétaro | Depileg">
+    <meta property="og:description"
+        content="Depilación profesional con cera de miel en Querétaro. Resultados duraderos y piel suave garantizada.">
+    <meta property="og:image" content="assets/uploads/image_0.png">
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "Depileg Querétaro",
+      "description": "Depilación profesional con cera de miel",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle Eucalipto 101-A esquina Avenida Real",
+        "addressLocality": "Querétaro",
+        "addressRegion": "QRO",
+        "postalCode": "76903",
+        "addressCountry": "MX"
+      },
+      "telephone": "+524424751644",
+      "priceRange": "$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "20:00"
         }
+      ]
+    }
+    </script>
 
-        nav {
-            margin-top: 1rem;
+    <!-- Tailwind CSS (CDN for development) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            dark: '#2D0A1F', // Dark burgundy
+                            DEFAULT: '#851E47', // Burgundy/wine
+                        },
+                        secondary: '#E8B4C8', // Soft pink
+                        light: '#F0E8D5', // Cream/beige
+                        accent: '#F9E79F', // Soft yellow
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
         }
+    </script>
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-weight: bold;
-            padding: 8px 15px;
-            border-radius: 5px;
-            transition: background 0.3s;
-        }
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap"
+        rel="stylesheet">
 
-        nav a:hover {
-            background: rgba(255,255,255,0.2);
-        }
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        section {
-            background: white;
-            margin-bottom: 2rem;
-            padding: 2rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-        section h2 {
-            color: #667eea;
-            margin-bottom: 1rem;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 0.5rem;
-        }
+<body class="font-sans text-gray-800 bg-light/30">
 
-        footer {
-            background: #333;
-            color: white;
-            text-align: center;
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-serif font-bold text-primary-dark">
+                Depileg <span class="text-primary">.</span>
+            </a>
 
-        .button {
-            display
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#servicios" class="text-gray-600 hover:text-primary transition font-medium">Servicios</a>
+                <a href="#porque-elegirnos" class="text-gray-600 hover:text-primary transition font-medium">Nosotros</a>
+                <a href="#precios" class="text-gray-600 hover:text-primary transition font-medium">Precios</a>
+                <a href="#testimonios" class="text-gray-600 hover:text-primary transition font-medium">Testimonios</a>
+                <a href="#contacto"
+                    class="px-6 py-2.5 bg-primary text-white rounded-full hover:bg-primary-dark transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                    Agendar Cita
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-gray-800 focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="flex flex-col p-6 space-y-4">
+                <a href="#servicios" class="text-gray-800 hover:text-primary font-medium">Servicios</a>
+                <a href="#porque-elegirnos" class="text-gray-800 hover:text-primary font-medium">Nosotros</a>
+                <a href="#precios" class="text-gray-800 hover:text-primary font-medium">Precios</a>
+                <a href="#testimonios" class="text-gray-800 hover:text-primary font-medium">Testimonios</a>
+                <a href="https://wa.me/5244247516444?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Depileg"
+                    class="text-primary font-bold">Agendar por WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+                alt="Spa Background" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary-dark/90 to-primary/70"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center text-white pt-20">
+            <div data-aos="fade-up" data-aos-duration="1000">
+                <span
+                    class="inline-block py-1 px-3 rounded-full bg-white/20 backdrop-blur-sm text-sm font-semibold mb-6 tracking-wide uppercase text-accent border border-white/30">
+                    Especialistas en Cera de Miel
+                </span>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-serif font-bold mb-6 leading-tight">
+                    Depilación Profesional <br />con Cera de Miel en Querétaro
+                </h1>
+                <p class="text-lg md:text-xl text-white/90 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
+                    Más de 10 años de experiencia cuidando tu piel. Resultados duraderos, higiene garantizada y un
+                    ambiente diseñado para tu comodidad.
+                </p>
+
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="https://wa.me/5244247516444?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Depileg"
+                        target="_blank"
+                        class="group bg-primary hover:bg-accent hover:text-primary-dark text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-xl flex items-center justify-center gap-2">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        Agendar Cita por WhatsApp
+                    </a>
+                    <a href="#servicios"
+                        class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-dark px-8 py-4 rounded-full font-semibold transition-all duration-300 flex items-center justify-center">
+                        Ver Servicios
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div
+                    class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-sm font-medium text-white/80 border-t border-white/20 pt-8 max-w-4xl mx-auto">
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-certificate text-accent text-2xl"></i>
+                        <span>10+ años de exp.</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-spa text-accent text-2xl"></i>
+                        <span>Cera de miel premium</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-user-md text-accent text-2xl"></i>
+                        <span>Certificadas</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-heart text-accent text-2xl"></i>
+                        <span>Cuidado de piel</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Interactive Shapes -->
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-10">
+            <svg class="relative block w-full h-[100px] text-light/30" data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="fill-current"></path>
+            </svg>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="servicios" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Nuestros Tratamientos</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-800">Servicios de Depilación</h3>
+                <div class="w-24 h-1 bg-accent mx-auto mt-6 rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1: Facial -->
+                <div class="group bg-light/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-secondary/30"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1596755389378-c31d21fd1273?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Depilación Facial" loading="lazy"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-xl shadow-md mb-6 -mt-14 relative z-10">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <h4 class="text-2xl font-serif font-bold text-primary-dark mb-4">Depilación Facial</h4>
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            Diseño de cejas, bozo, barbilla y rostro completo. Técnica delicada para la piel sensible
+                            del rostro, evitando irritaciones.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Diseño
+                                personalizado</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Cera
+                                especial rostro</li>
+                        </ul>
+                        <a href="https://wa.me/5244247516444?text=Hola,%20me%20interesa%20la%20depilación%20facial"
+                            class="block w-full text-center py-3 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition">
+                            Agendar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Corporal Mujer -->
+                <div class="group bg-light/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-secondary/30"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Depilación Corporal" loading="lazy"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-xl shadow-md mb-6 -mt-14 relative z-10">
+                            <i class="fas fa-female"></i>
+                        </div>
+                        <h4 class="text-2xl font-serif font-bold text-primary-dark mb-4">Corporal Mujer</h4>
+                        <p class="text-gray-600 mb-6">
+                            Piernas completas, axilas, brazos, bikini clásico y brasileño. Piel suave y libre de vello
+                            por semanas.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Bikini
+                                Brasileño Especialidad</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Menos dolor
+                            </li>
+                        </ul>
+                        <a href="https://wa.me/5244247516444?text=Hola,%20me%20interesa%20la%20depilación%20corporal"
+                            class="block w-full text-center py-3 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition">
+                            Agendar Cita
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Hombre -->
+                <div class="group bg-light/20 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-secondary/30"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618331835717-801e976710b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                            alt="Depilación Hombre" loading="lazy"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div
+                            class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary text-xl shadow-md mb-6 -mt-14 relative z-10">
+                            <i class="fas fa-male"></i>
+                        </div>
+                        <h4 class="text-2xl font-serif font-bold text-primary-dark mb-4">Depilación Hombre</h4>
+                        <p class="text-gray-600 mb-6">
+                            Pecho, espalda, hombros, piernas y axilas. Servicio profesional adaptado a las necesidades
+                            masculinas.
+                        </p>
+                        <ul class="text-sm text-gray-500 mb-6 space-y-2">
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Privacidad
+                                total</li>
+                            <li class="flex items-center gap-2"><i class="fas fa-check text-secondary"></i> Resultados
+                                Higiénicos</li>
+                        </ul>
+                        <a href="https://wa.me/5244247516444?text=Hola,%20me%20interesa%20la%20depilación%20masculina"
+                            class="block w-full text-center py-3 border border-primary text-primary font-medium rounded-lg hover:bg-primary hover:text-white transition">
+                            Agendar Cita
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#precios"
+                    class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition border-b-2 border-accent pb-1">
+                    Ver lista completa de precios <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="porque-elegirnos" class="py-20 bg-primary-dark text-white relative overflow-hidden">
+        <!-- Abstract Bg -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-primary rounded-full opacity-20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-secondary rounded-full opacity-10 blur-3xl">
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div data-aos="fade-right">
+                    <h2 class="text-sm font-bold tracking-widest text-accent uppercase mb-2">Por qué elegir Depileg</h2>
+                    <h3 class="text-3xl md:text-5xl font-serif font-bold mb-8">Experiencia y Calidad <br />en Cada
+                        Sesión</h3>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                        Nuestra cera de miel 100% natural no solo elimina el vello, sino que nutre tu piel dejándola
+                        suave y radiante. Nos distinguimos por nuestra técnica experta que minimiza el dolor.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <i class="fas fa-award text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">10+ Años</h4>
+                                <p class="text-sm text-gray-400">De experiencia comprobada en el sector.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <i class="fas fa-leaf text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Cera Natural</h4>
+                                <p class="text-sm text-gray-400">Formula de miel suave con tu piel.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <i class="fas fa-shield-alt text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Higiene Total</h4>
+                                <p class="text-sm text-gray-400">Protocolos estrictos de limpieza. No reciclamos cera.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center shrink-0">
+                                <i class="fas fa-clock text-accent"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold mb-1">Resultados</h4>
+                                <p class="text-sm text-gray-400">Piel suave por 3-4 semanas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="relative" data-aos="fade-left">
+                    <div class="absolute -inset-4 bg-accent/20 rounded-2xl transform rotate-3"></div>
+                    <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        alt="Sala de depilación" class="relative rounded-2xl shadow-2xl w-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precios" class="py-20 bg-light/30">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Lista de Precios</h2>
+                <h3 class="text-3xl md:text-5xl font-serif font-bold text-gray-800">Paquetes y Costos</h3>
+                <p class="text-gray-600 mt-4 max-w-xl mx-auto">Precios transparentes y competitivos. Pregunta por
+                    nuestros paquetes promocionales.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl overflow-hidden" data-aos="flip-up">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-8 md:p-12 border-b md:border-b-0 md:border-r border-gray-100">
+                        <h4 class="text-2xl font-serif font-bold text-primary mb-8 flex items-center gap-2">
+                            <i class="fas fa-star text-accent"></i> Populares
+                        </h4>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Pierna Completa</span>
+                                <span class="font-bold text-primary-dark">$300</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Media Pierna</span>
+                                <span class="font-bold text-primary-dark">$190</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Bikini Brasileño</span>
+                                <span class="font-bold text-primary-dark">$170</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Axilas</span>
+                                <span class="font-bold text-primary-dark">$90</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Boz (Bigote)</span>
+                                <span class="font-bold text-primary-dark">$35</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                                <span class="text-gray-700 font-medium">Cara Completa</span>
+                                <span class="font-bold text-primary-dark">$230</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-8 md:p-12 bg-gray-50/50">
+                        <h4 class="text-2xl font-serif font-bold text-primary mb-8">Otros Servicios</h4>
+                        <ul class="space-y-4">
+                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                <span class="text-gray-700 font-medium">Espalda Completa</span>
+                                <span class="font-bold text-primary-dark">$200</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                <span class="text-gray-700 font-medium">Pecho</span>
+                                <span class="font-bold text-primary-dark">$120</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                <span class="text-gray-700 font-medium">Brazos</span>
+                                <span class="font-bold text-primary-dark">$200</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                <span class="text-gray-700 font-medium">Diseño de Ceja</span>
+                                <span class="font-bold text-primary-dark">$100</span>
+                            </li>
+                            <li class="flex justify-between items-center border-b border-gray-200 pb-2">
+                                <span class="text-gray-700 font-medium">Planchado de Ceja</span>
+                                <span class="font-bold text-primary-dark">$120</span>
+                            </li>
+                        </ul>
+                        <div class="mt-8">
+                            <a href="https://wa.me/5244247516444?text=Hola,%20me%20gustaría%20consultar%20el%20precio%20de..."
+                                class="block w-full py-3 bg-white border-2 border-primary text-primary text-center rounded-lg font-bold hover:bg-primary hover:text-white transition duration-300">
+                                Cotizar Otro Servicio
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h3 class="text-3xl md:text-4xl font-serif font-bold text-gray-800">Cómo Funciona</h3>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 relative">
+                <!-- Line connector for desktop -->
+                <div
+                    class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -z-10 transform -translate-y-1/2">
+                </div>
+
+                <div class="w-full md:w-1/4 text-center bg-white p-4" data-aos="fade-up" data-aos-delay="0">
+                    <div
+                        class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                        1</div>
+                    <h4 class="font-bold text-lg mb-2">Agenda</h4>
+                    <p class="text-gray-600 text-sm">Reserva tu cita fácilmente por WhatsApp.</p>
+                </div>
+                <div class="w-full md:w-1/4 text-center bg-white p-4" data-aos="fade-up" data-aos-delay="100">
+                    <div
+                        class="w-16 h-16 mx-auto bg-secondary text-primary-dark rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                        2</div>
+                    <h4 class="font-bold text-lg mb-2">Visítanos</h4>
+                    <p class="text-gray-600 text-sm">Ven a nuestra sucursal limpia y cómoda.</p>
+                </div>
+                <div class="w-full md:w-1/4 text-center bg-white p-4" data-aos="fade-up" data-aos-delay="200">
+                    <div
+                        class="w-16 h-16 mx-auto bg-primary text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                        3</div>
+                    <h4 class="font-bold text-lg mb-2">Relájate</h4>
+                    <p class="text-gray-600 text-sm">Deja que nuestras expertas cuiden tu piel.</p>
+                </div>
+                <div class="w-full md:w-1/4 text-center bg-white p-4" data-aos="fade-up" data-aos-delay="300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-accent text-primary-dark rounded-full flex items-center justify-center text-2xl font-bold mb-4 shadow-lg">
+                        4</div>
+                    <h4 class="font-bold text-lg mb-2">¡Disfruta!</h4>
+                    <p class="text-gray-600 text-sm">Presume una piel suave por semanas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonios" class="py-20 bg-light/30 border-t border-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-center text-3xl font-serif font-bold mb-12">Lo que dicen nuestras clientas</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"¡La mejor depilación en Querétaro! No me dolió casi nada y la
+                        cera huele delicioso. El lugar es súper limpio."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">
+                            MP</div>
+                        <div>
+                            <h5 class="font-bold text-sm">María Pérez</h5>
+                            <span class="text-xs text-gray-400">Cliente Frecuente</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"Llevo 2 años viniendo y no las cambio por nada. Me encanta que
+                        son muy puntuales y profesionales."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">
+                            AL</div>
+                        <div>
+                            <h5 class="font-bold text-sm">Ana López</h5>
+                            <span class="text-xs text-gray-400">Cliente Verificado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="flex text-accent mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                            class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 mb-6 italic">"El bikini brasileño lo hacen con mucho cuidado y respeto. 100%
+                        recomendadas."</p>
+                    <div class="flex items-center gap-4">
+                        <div
+                            class="w-10 h-10 bg-gray-200 rounded-full flex items-center justify-center text-gray-500 font-bold">
+                            CR</div>
+                        <div>
+                            <h5 class="font-bold text-sm">Carla Ruiz</h5>
+                            <span class="text-xs text-gray-400">Cliente Frecuente</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location & Contact -->
+    <section id="contacto" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 rounded-3xl overflow-hidden shadow-2xl">
+                <!-- Map -->
+                <div class="h-[400px] lg:h-auto bg-gray-200 relative">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Calle+Eucalipto+101-A+Colinas+del+Sur+Queretaro&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="p-12 bg-primary-dark text-white flex flex-col justify-center">
+                    <h3 class="text-3xl font-serif font-bold mb-8">Visítanos</h3>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Dirección</h4>
+                                <p class="text-gray-300">Calle Eucalipto 101-A esquina Avenida Real, <br>Col. Colinas
+                                    del Sur, C.P. 76903, Querétaro</p>
+                                <p class="text-sm text-accent mt-1">Cerca de Juriquilla y Centro Sur</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone-alt text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Teléfono / WhatsApp</h4>
+                                <p class="text-gray-300">+52 442 475 1644</p>
+                                <a href="https://wa.me/5244247516444" target="_blank"
+                                    class="text-accent hover:underline text-sm">Enviar mensaje ahora</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-clock text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Horario</h4>
+                                <p class="text-gray-300">Lunes a Viernes: 9:00 AM - 8:00 PM</p>
+                                <p class="text-gray-300">Sábado: 9:00 AM - 4:00 PM</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-parking text-2xl text-accent mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-lg">Estacionamiento</h4>
+                                <p class="text-gray-300">Disponible y seguro para clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-2xl font-serif font-bold mb-6">Depileg<span class="text-primary">.</span></h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        Especialistas en depilación con cera de miel en Querétaro. Tu piel merece el mejor cuidado
+                        profesional.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i
+                                class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Enlaces Rápidos</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#servicios" class="hover:text-primary transition">Servicios</a></li>
+                        <li><a href="#precios" class="hover:text-primary transition">Lista de Precios</a></li>
+                        <li><a href="#porque-elegirnos" class="hover:text-primary transition">Nosotros</a></li>
+                        <li><a href="#contacto" class="hover:text-primary transition">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Servicios Populares</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-primary transition">Bikini Brasileño</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Depilación de Ceja</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Pierna Completa</a></li>
+                        <li><a href="#" class="hover:text-primary transition">Paquetes Corporales</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-bold mb-6">Contacto</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li class="flex gap-3"><i class="fas fa-phone mt-1 text-primary"></i> +52 442 475 1644</li>
+                        <li class="flex gap-3"><i class="fas fa-map-marker-alt mt-1 text-primary"></i> Colinas del Sur,
+                            Qro.</li>
+                        <li class="flex gap-3"><i class="fas fa-envelope mt-1 text-primary"></i> info@depileg.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-xs">
+                <p>&copy; 2024 Depileg Querétaro. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/5244247516444?text=Hola,%20quiero%20agendar%20una%20cita%20en%20Depileg"
+        class="whatsapp-float bg-[#25D366] hover:bg-[#128C7E] text-white fixed bottom-8 right-8 w-16 h-16 rounded-full flex items-center justify-center shadow-2xl z-50 transition-all duration-300"
+        target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
