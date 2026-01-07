@@ -72,69 +72,68 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BeautySalon",
-      "name": "Depileg Querétaro - Depilación con Cera de Miel",
-      "logo": "https://depilegqueretaro.com/assets/img/depileg_queretaro_logo_depilacion.png",
-      "image": "https://depilegqueretaro.com/assets/img/depileg_queretaro_depilacion_cera_de_miel_profesional_estetica.webp",
-      "url": "https://depilegqueretaro.com/",
-      "description": "Depilación profesional con cera de miel en Querétaro. Más de 10 años de experiencia ofreciendo la mejor técnica para una piel suave y sin vello.",
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": "20.55211",
-        "longitude": "-100.39791"
-      },
-      "hasMap": "https://www.google.com/maps?q=20.55211,-100.39791",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "Calle Eucalipto 101-A, esquina Av. Camino Real, Colinas del Sur",
-        "addressLocality": "Querétaro",
-        "addressRegion": "QRO",
-        "postalCode": "76903",
-        "addressCountry": "MX"
-      },
-      "serviceArea": {
-        "@type": "City",
-        "name": "Querétaro",
-        "sameAs": "https://www.wikidata.org/wiki/Q173160"
-      },
-      "telephone": "+524424751644",
-      "priceRange": "$$",
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "10:00",
-          "closes": "13:00"
+          "@type": "BeautySalon",
+          "@id": "https://depilegqueretaro.com/#business",
+          "name": "Depileg Querétaro - Depilación con Cera de Miel",
+          "logo": "https://depilegqueretaro.com/assets/img/depileg_queretaro_logo_depilacion.png",
+          "image": "https://depilegqueretaro.com/assets/img/depileg_queretaro_depilacion_cera_de_miel_profesional_estetica.webp",
+          "url": "https://depilegqueretaro.com/",
+          "description": "Depilación profesional con cera de miel en Querétaro. Más de 10 años de experiencia ofreciendo la mejor técnica para una piel suave y sin vello.",
+          "telephone": "+524424751644",
+          "priceRange": "$$",
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "20.55211",
+            "longitude": "-100.39791"
+          },
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Calle Eucalipto 101-A, esquina Av. Camino Real, Colinas del Sur",
+            "addressLocality": "Querétaro",
+            "addressRegion": "QRO",
+            "postalCode": "76903",
+            "addressCountry": "MX"
+          },
+          "serviceArea": {
+            "@type": "City",
+            "name": "Querétaro",
+            "sameAs": "https://www.wikidata.org/wiki/Q173160"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "10:00",
+              "closes": "13:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "16:00",
+              "closes": "21:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "10:00",
+              "closes": "14:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Sunday",
+              "opens": "16:00",
+              "closes": "19:00"
+            }
+          ]
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
-          "opens": "16:00",
-          "closes": "19:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "10:00",
-          "closes": "14:00"
-        },
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Sunday",
-          "opens": "16:00",
-          "closes": "19:00"
+          "@type": "WebSite",
+          "@id": "https://depilegqueretaro.com/#website",
+          "url": "https://depilegqueretaro.com/",
+          "name": "Depileg Querétaro",
+          "publisher": { "@id": "https://depilegqueretaro.com/#business" }
         }
       ]
     }
